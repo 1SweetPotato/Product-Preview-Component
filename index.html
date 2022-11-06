@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf_8">
+        <title>Product preview card</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fraunces">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                background-color: hsl(30, 38%, 92%);
+            }
+            .container{
+                position: absolute;
+                top: 20%;
+                left: 30%;
+                overflow: hidden;
+                background-color: white;
+                height: 420px;
+                width: 550px;
+                border-radius: 2%;
+            }
+            .container::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .image__side , .description {
+                float: left;
+                width: 51%;
+            }
+            /* Image side stuff */
+            
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* description side stuff           */
+            .description {
+                width: 49%;
+                height: 420px;
+                padding: 27px;
+            }
+            #name {
+                font-family: "Montserrat";
+                letter-spacing: 0.25rem;
+                font-size: x-small;
+                color: hsl(228, 12%, 48%);
+                font-weight:bold;
+            }
+            #product__name {
+                font-weight: 700;
+                font-size:xx-large;
+            }
+            h1{
+                font-family: "Fraunces", "serif";
+                font-weight: bolder;
+                line-height: 1;
+                padding-right: 10px;
+            }
+            #product__description {
+                font-size: small;
+                font-family: "Montserrat";
+                color: hsl(228, 12%, 48%);
+                line-height: 1.5;
+                font-weight: bold;
+            }
+            .product__price {
+                font-family: "Fraunces";
+                margin: 25px 0px;
+                height: 40px;
+                
+            }
+            #new__price{
+                float: left;
+                font-size:xx-large;
+                margin-right: 20px;
+                font-weight: 700;
+                color: #5f7d65;
+                
+            }
+            #old__price{
+                position: relative;
+                top: 20%;
+                display: inline;
+                box-sizing: unset;
+                font-size: small;
+                font-weight: bold;
+                text-decoration: line-through;
+                color: rgb(141, 140, 140)
+            }
+            button {
+                background-color: #5f7d65;
+                width: 100%;
+                height: 50px;
+                border-radius:   4% / 12%;
+                border: none;
+                color: white;
+                font-weight: 700;
+            }
+            button:is(:hover , :active) {
+                background-color: #334a1c;
+            }
+            #cart {
+                margin-right: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="image__side">
+            <img src="image-product-desktop.jpg" alt="Gabrielle Essence eau de parfum"> 
+         
+            </div>
+            <div class="description">
+                <div id="name">PERFUME</div>
+                <h1>Gabrielle Essence Eau De Parfum</h1>
+                <div id="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</div>
+                <div class="product__price">
+                    <div id="new__price">$149.99</div> <div id="old__price">$169.99</div>
+                </div>
+                <button id="submission__button">
+                    <i class="fa-solid fa-cart-shopping" id="cart"></i>Add to Cart
+                    
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
